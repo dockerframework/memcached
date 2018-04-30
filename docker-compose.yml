@@ -13,6 +13,6 @@ services:
       - "8111:11211"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ./cache/memcached:/data                            # volume for data
+      - ./cache/memcached:/tmp/data                        # volume for data
     environment:
-      - MEMCACHED_VERSION=1.5
+      - MEMCACHED_VERSION=1.5.7
