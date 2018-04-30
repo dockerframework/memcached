@@ -27,7 +27,7 @@ RUN mkdir -p /tmp/data && chown memcache:memcache /tmp/data
 VOLUME /tmp/data
 WORKDIR /tmp/data
 
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY ./docker-entrypoint.sh /usr/local/bin/
 RUN ln -sf usr/local/bin/docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
 
