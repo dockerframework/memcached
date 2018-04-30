@@ -1,4 +1,4 @@
-ARG MEMCACHED_VERSION=1.5
+ARG MEMCACHED_VERSION=1.5.7
 FROM memcached:${MEMCACHED_VERSION}-alpine
 
 # ================================================================================================
