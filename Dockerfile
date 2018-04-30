@@ -23,9 +23,9 @@ FROM memcached:${MEMCACHED_VERSION}-alpine
 MAINTAINER "Laradock Team <mahmoud@zalt.me>"
 
 USER root
-RUN mkdir -p /data && chown memcache:memcache /data
-VOLUME /data
-WORKDIR /data
+RUN mkdir -p /tmp/data && chown memcache:memcache /tmp/data
+VOLUME /tmp/data
+WORKDIR /tmp/data
 
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh
