@@ -22,6 +22,7 @@ FROM memcached:${MEMCACHED_VERSION}-alpine
 
 MAINTAINER "Laradock Team <mahmoud@zalt.me>"
 
+USER root
 RUN mkdir -p /data && chown memcache:memcache /data
 VOLUME /data
 WORKDIR /data
